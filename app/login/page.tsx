@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: 'Login',
 };
 export default function LoginPage() {
+  console.log("DEBUG", 'NEXTAUTH_URL', process.env.NEXTAUTH_URL);
+  console.log("DEBUG", 'AUTH_SECRET', process.env.NEXTAUTH_SECRET);
+
   return (
     <main className="flex items-center justify-center md:h-screen">
       <div className="relative mx-auto flex w-full max-w-[400px] flex-col space-y-2.5 p-4 md:-mt-32">
