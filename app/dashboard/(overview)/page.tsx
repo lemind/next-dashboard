@@ -6,11 +6,14 @@ import { fetchCardData } from '@/app/lib/data';
 import { Suspense } from 'react';
 import { CardsSkeleton, LatestInvoicesSkeleton, RevenueChartSkeleton } from '@/app/ui/skeletons';
 import { Metadata } from 'next';
+import { authMiddleware } from '@/app/middleware/auth';
 
 
 export const metadata: Metadata = {
   title: 'Dashboard',
 };
+
+// export const middleware = authMiddleware;
 
 export default async function Page() {
   return (
