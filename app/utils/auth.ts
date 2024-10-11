@@ -1,7 +1,5 @@
 import { SignJWT, jwtVerify } from 'jose';
 
-const JWT_SECRET = process.env.JWT_SECRET!
-
 // Generate a JWT token
 export const generateToken = async (user: { id: string; email: string }): Promise<string> => {
   const payload = {
@@ -9,7 +7,8 @@ export const generateToken = async (user: { id: string; email: string }): Promis
     email: user.email,
   };
 
-  const secret = JWT_SECRET;
+  const secret = process.env.JWT_SECRET;
+
   if (!secret) {
     throw new Error("JWT_SECRET is not defined");
   }
