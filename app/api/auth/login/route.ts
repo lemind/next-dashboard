@@ -26,7 +26,6 @@ export async function POST(req: Request) {
   
   if (user && isMatch) {
     const token = await generateToken(user);
-console.log('token', token);
 
     const cookie = serialize('token', token, {
       httpOnly: true, // Cookie is only accessible by the server
