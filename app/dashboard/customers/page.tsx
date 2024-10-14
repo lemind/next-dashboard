@@ -1,3 +1,4 @@
+import Layout from '@/app/dashboard/layout';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
